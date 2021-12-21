@@ -1,3 +1,13 @@
+@import url('https://cdn-ec853.web.app/css/style.css');
+
 body {
   background-color: #fff;
+}
+
+.logo {
+  width: 70px;
+}
+
+hr {
+  border: 1px solid #c2c2c2;
 }
