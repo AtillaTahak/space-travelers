@@ -1,15 +1,16 @@
 const MISSIONS = 'MISSIONS';
 
-initialMissionsState =[{
+const initialMissionsState = [{
 
-}]
+}];
 
-const rocketsReducer =(state=initialRocketState, action) =>{
-    switch(action.type){
-        case MISSIONS:
-            return action.payload;
-        default:
-            return state;
+const missionsReducer = (state = initialMissionsState, action) => {
+  switch (action.type) {
+    case MISSIONS:
+      return action.payload;
+    default:
+      return state;
+  }
+};
 
-    }
-}
+export default missionsReducer;

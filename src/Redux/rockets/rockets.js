@@ -1,14 +1,15 @@
 const ROCKETS = 'ROCKETS';
-initialRocketState =[{
+const initialRocketState = [{
 
-}]
+}];
 
-const rocketsReducer =(state=initialRocketState, action) =>{
-    switch(action.type){
-        case ROCKETS:
-            return action.payload;
-        default:
-            return state;
+const rocketsReducer = (state = initialRocketState, action) => {
+  switch (action.type) {
+    case ROCKETS:
+      return action.payload;
+    default:
+      return state;
+  }
+};
 
-    }
-}
+export default rocketsReducer;

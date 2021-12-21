@@ -1,15 +1,16 @@
 const DRAGONS = 'DRAGONS';
 
-initialDragonsState =[{
+const initialDragonsState = [{
 
-}]
+}];
 
-const rocketsReducer =(state=initialRocketState, action) =>{
-    switch(action.type){
-        case DRAGONS:
-            return action.payload;
-        default:
-            return state;
+const dragonsReducer = (state = initialDragonsState, action) => {
+  switch (action.type) {
+    case DRAGONS:
+      return action.payload;
+    default:
+      return state;
+  }
+};
 
-    }
-}
+export default dragonsReducer;

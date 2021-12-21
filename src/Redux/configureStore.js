@@ -5,18 +5,17 @@ import rocketsReducer from './rockets/rockets';
 import missionsReducer from './missions/missions';
 import dragonsReducer from './dragons/dragons';
 
-
 const reducer = combineReducers({
 
-    rockets: rocketsReducer,
-    missions: missionsReducer,
-    dragons:dragonsReducer
+  rockets: rocketsReducer,
+  missions: missionsReducer,
+  dragons: dragonsReducer,
 
 });
 
 const store = createStore(
-    reducer,
-    applyMiddleware(logger,thunk),
+  reducer,
+  applyMiddleware(logger, thunk),
 );
 
 export default store;
