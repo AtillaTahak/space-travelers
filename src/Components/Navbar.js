@@ -1,8 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../logo.png';
 
 const Navbar = () => (
-  <div>
+  <div className="header">
+    <div className="header-left">
+      <image src={logo} />
+    </div>
     <nav>
       <ul>
         <li>
