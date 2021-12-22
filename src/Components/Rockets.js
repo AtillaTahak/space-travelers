@@ -4,20 +4,20 @@ import { rocketsAction } from '../Redux/rockets/rockets';
 import Rocket from './Rocket';
 
 const Rockets = () => {
-  const reducerRock = useSelector((state) => state.rockets);
+  const reducerRockets = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(rocketsAction());
-  }, []);
+    if (reducerRockets.length === 1) {
+      dispatch(rocketsAction());
+    }
+  }, [dispatch]);
 
   return (
     <div>
-      <ul>
-        { reducerRock.data && reducerRock.data.map((e) => (
-          <Rocket key={e.id} content={e} />
-        ))}
-      </ul>
+      { reducerRockets.data && reducerRockets.data.map((e) => (
+        <Rocket key={e.id} content={e} />
+      ))}
     </div>
   );
 };
