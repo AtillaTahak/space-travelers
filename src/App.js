@@ -5,11 +5,12 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import Missions from './Components/missionpage/Missions';
+// import Missions from './Components/missionpage/missionPage';
 import Rockets from './Components/Rockets';
 import Dragons from './Components/Dragons';
 import MyProfile from './Components/MyProfile';
 import Navbar from './Components/Navbar';
+import MissionPage from './Components/missionpage/index';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Rockets />} exact />
         <Route path="/Dragons" element={<Dragons />} />
-        <Route path="/Missions" element={<Missions />} />
+        <Route path="/Mission" element={<MissionPage />} />
         <Route path="/MyProfile" element={<MyProfile />} />
       </Routes>
     </Router>
