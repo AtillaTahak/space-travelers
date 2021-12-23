@@ -7,13 +7,13 @@ import { getMissions } from '../../Redux/missions/mission';
 const MissionsPage = () => {
   const missions = useSelector((state) => state.missions.missions);
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (missions.length === 0) {
-      dispatch(getMissions())
+      dispatch(getMissions());
     }
-  }, [])
+  }, []);
 
   return (
     <div className="mission__container">
