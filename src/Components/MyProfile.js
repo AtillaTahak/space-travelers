@@ -1,11 +1,25 @@
-import React from 'react';
-import MissionProfile from './missionpage/mission_myprofile';
+import { useSelector } from 'react-redux';
 
-const MyProfile = () => (
-  <div>
-    <h1>my profile</h1>
-    <MissionProfile />
-  </div>
-);
+const MyProfile = () => {
+  const reducerRockets = useSelector((state) => state.rockets);
+
+  return (
+    <div className="container">
+      <div className="col-4" />
+      <div className="col-4" />
+      <div className="col-4">
+        <h3>Reserved Rocket</h3>
+        <ul>
+          {reducerRockets.data && reducerRockets.data.filter((e) => e.reserved === true).map((e) => (
+            <li key={e.id}>
+              {e.rocket_name}
+              <hr />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
 
 export default MyProfile;

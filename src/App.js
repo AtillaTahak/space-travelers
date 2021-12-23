@@ -8,7 +8,7 @@ import {
 
 // import Missions from './Components/missionpage/missionPage';
 import Rockets from './Components/Rockets';
-import Dragons from './Components/Dragons';
+import Dragons from './Components/dragons';
 import MyProfile from './Components/MyProfile';
 import Navbar from './Components/Navbar';
 import MissionPage from './Components/missionpage/index';
