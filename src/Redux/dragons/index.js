@@ -6,12 +6,20 @@ const dragonsReducer = (state = [], action) => {
   switch (action.type) {
     case DRAGONS:
       return action.dragons;
-    case RESERVE_DRAGON:
+    case RESERVE_DRAGON: {
       const newState = state.map((dragon) => {
         if (dragon.id !== action.id) return dragon;
         return { ...dragon, reserved: true };
       });
       return newState;
+    }
+    case CANCEL_RESERVATION: {
+      const newState = state.map((dragon) => {
+        if (dragon.id !== action.id) return dragon;
+        return { ...dragon, reserved: false };
+      });
+      return newState;
+    }
     default:
       return state;
   }
@@ -28,8 +36,6 @@ const getDragons = async () => {
   );
 
   const result = await dragons.json();
-
-  console.log(result);
 
   Object.entries(result).forEach((dragon) => {
     const mDragon = dragon[1];
@@ -58,5 +64,5 @@ const cancelReservation = (id) => ({
   id,
 });
 
-export { getDragons, reserveDragon };
+export { getDragons, reserveDragon, cancelReservation };
 export default dragonsReducer;

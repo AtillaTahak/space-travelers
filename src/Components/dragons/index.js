@@ -4,11 +4,7 @@ import { getDragons } from '../../Redux/dragons';
 import Dragon from './Dragon';
 
 const Dragons = () => {
-  const dragons = useSelector((state) => {
-    console.log(state);
-    return state.dragons;
-  });
-
+  const dragons = useSelector((state) => state.dragons);
   const dispatch = useDispatch();
 
   useEffect(async () => {

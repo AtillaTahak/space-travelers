@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { reserveDragon } from '../../Redux/dragons'
+import { reserveDragon, cancelReservation } from '../../Redux/dragons';
 
 const Dragon = ({
   id, name, description, image, reserve,
@@ -12,8 +12,8 @@ const Dragon = ({
     dispatch(reserveDragon(e.target.id));
   };
 
-  const cancelHandler = () => {
-    dispatch();
+  const cancelHandler = (e) => {
+    dispatch(cancelReservation(e.target.id));
   };
 
   return (
@@ -35,7 +35,7 @@ const Dragon = ({
         {
           (reserve)
             ? <button id={id} className="btn btn--lg" type="button" onClick={cancelHandler}>Cancel Reservation</button>
-            : <button id={id} className="btn btn--lg" type="button" onClick={reserveHandler}>Reserve Dragon</button>
+            : <button id={id} className="btn btn--primary btn--lg" type="button" onClick={reserveHandler}>Reserve Dragon</button>
         }
       </div>
     </div>
