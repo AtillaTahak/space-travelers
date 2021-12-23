@@ -5,6 +5,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+
 // import Missions from './Components/missionpage/missionPage';
 import Rockets from './Components/Rockets';
 import Dragons from './Components/Dragons';
@@ -16,9 +17,6 @@ function App() {
   return (
     <Router>
       <Navbar />
-
-      {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
       <Routes>
         <Route path="/" element={<Rockets />} exact />
         <Route path="/Dragons" element={<Dragons />} />

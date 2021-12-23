@@ -1,10 +1,20 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import MissionList from './missionList';
 import './missionPage.css';
+import { getMissions } from '../../Redux/missions/mission';
 
 const MissionsPage = () => {
   const missions = useSelector((state) => state.missions.missions);
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    if (missions.length === 0) {
+      dispatch(getMissions())
+    }
+  }, [])
+
   return (
     <div className="mission__container">
       <table className="table">

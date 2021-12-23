@@ -8,6 +8,7 @@ const MissionList = ({
   id, name, description, reserved,
 }) => {
   const dispatch = useDispatch();
+  
   return (
     <tr className="row">
       <td className="column name">{name}</td>
