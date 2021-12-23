@@ -8,7 +8,7 @@ const Rockets = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (reducerRockets.length === 1) {
+    if (reducerRockets.data.length === 0) {
       dispatch(rocketsAction());
     }
   }, [dispatch]);
