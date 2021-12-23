@@ -21,7 +21,8 @@ function Rocket(props) {
           <div className="rockets-content margin-x-xs">
             <h4>
               {content.reserved && (
-                <span className="reserved">reserved</span>
+                <span className="chip text-sm chip--success margin-right-sm">
+                  <i className="chip__label">reserved</i></span>
               )}
               {content.rocket_name}
             </h4>
