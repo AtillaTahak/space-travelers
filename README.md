@@ -1,6 +1,6 @@
-# Math Magicians
+# Space Travellers
 
-> React based single page app.  
+> This is a React and Redux based single page application about Space travel.  
 
 # Demo Link
 [Click here](https://lucid-kalam-d798af.netlify.app)
@@ -15,7 +15,7 @@ To get a local copy up and running follow these simple steps.
 
 - You can clone this repo by typing `git clone git@github.com:AtillaTahak/space-travelers.git` on your terminal.
 
-- Type `cd math-app` to access the project on the terminal.
+- Type `cd space-travelers` to access the project on the terminal.
   
 - Run `npm install` from your editor's terminal.
 
