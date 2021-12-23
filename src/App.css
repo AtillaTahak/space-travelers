@@ -12,6 +12,12 @@ hr {
   border: 1px solid #c2c2c2;
 }
 
-.btn--primary {
-  background-color: dodgerblue;
+.cancelReserve {
+  background-color: red;
+  color: white;
+}
+
+.reserved {
+  background-color: #c2c2c2;
+  color: aquamarine;
 }
