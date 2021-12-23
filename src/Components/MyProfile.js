@@ -1,14 +1,23 @@
 import { useSelector } from 'react-redux';
-import Rocket from './Rocket';
 
 const MyProfile = () => {
   const reducerRockets = useSelector((state) => state.rockets);
 
   return (
-    <div>
-      { reducerRockets.data && reducerRockets.data.filter((e) => e.reserved === true).map((e) => (
-        <Rocket key={e.id} content={e} />
-      ))}
+    <div className="container">
+      <div className="col-4" />
+      <div className="col-4" />
+      <div className="col-4">
+        <h3>Reserved Rocket</h3>
+        <ul>
+          {reducerRockets.data && reducerRockets.data.filter((e) => e.reserved === true).map((e) => (
+            <li key={e.id}>
+              {e.rocket_name}
+              <hr />
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
