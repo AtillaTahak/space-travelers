@@ -19,7 +19,12 @@ function Rocket(props) {
         </div>
         <div className="col-8">
           <div className="rockets-content margin-x-xs">
-            <h4>{content.rocket_name}</h4>
+            <h4>
+              {content.reserved && (
+                <span className="reserved">reserved</span>
+              )}
+              {content.rocket_name}
+            </h4>
             <p>{content.description}</p>
             <button className={content.reserved ? 'btn margin-y-xs cancelReserve' : 'btn margin-y-xs'} type="button" onClick={() => { dispatch(reserved(content)); }}>{content.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
           </div>
