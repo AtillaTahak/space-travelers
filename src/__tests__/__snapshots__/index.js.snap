@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing the app testing MissionsPage UI 1`] = `
+"<div class=\\"mission__container\\">
+  <table class=\\"table\\">
+    <thead>
+      <tr class=\\"row\\">
+        <th class=\\"column head\\">Mission</th>
+        <th class=\\"column head\\">Description</th>
+        <th class=\\"column head\\">Status</th>
+        <th class=\\"column head\\"> </th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>"
+`;
