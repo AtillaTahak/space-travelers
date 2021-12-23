@@ -1,6 +1,8 @@
-# Math Magicians
+# Space traveler's hub
+> This project uses the official spaceX API to pull in a list of active rockets and missions!
+> This project was created using React(JavaScript) and Redux, other technologies used: Axios, Thunk, CSS, Git
 
-> React based single page app.  
+ 
 
 # Demo Link
 [Click here](https://lucid-kalam-d798af.netlify.app)
